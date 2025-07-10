@@ -8,8 +8,8 @@ steps:
     args: ['push',  'asia-southeast2-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/hello-world:$SHORT_SHA']
 
   - name: google/cloud-sdk
-    args: ['gcloud', 'run', 'deploy', 'hello-world-python', 
-           '--image=us-central1-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/hello-world:$SHORT_SHA', 
+    args: ['gcloud', 'run', 'deploy', 'hello-world', 
+           '--image=asia-southeast2-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/hello-world:$SHORT_SHA', 
            '--region', 'asia-southeast2', '--platform', 'managed', 
            '--allow-unauthenticated']
 
